@@ -12,7 +12,10 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
+
+/* center logo section + socials */
 
 .center-container{
     width: 100%;
@@ -24,6 +27,7 @@ body{
     justify-content: center;
     text-align: center;
 }
+
 
 h1{
     margin: 0;
@@ -58,14 +62,103 @@ a{
     color: #000000;
 }
 
+/* buttons below white bar */
+
+.button-container{
+    height: 100px;
+    margin: 40px;
+}
+
+.button2{
+    display:inline-block;
+    border: 3px solid #FFFFFF;
+    padding: 7px;
+    border-radius: 3px;
+    margin:0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-family: inherit;
+    font-weight:900;
+    color: black;
+    text-align:center;
+    transition: all 0.15s;
+    background:rgba(255,255,255,1);
+}
+.button2:hover{
+    color: grey;
+    border-color:#DDDDDD;
+    background:rgba(255,255,255,0.9);
+}
+.button2:active{
+    color:#BBBBBB;
+    border-color:#BBBBBB;
+}
+@media all and (max-width:30em){
+    .button2{
+        display:block;
+        margin:0.4em auto;
+    }
+}
+
+/* partners */
+
+.partner-container{
+    margin-top: -10px;
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partners a{
+    padding-top: 3px;
+    display: inline-flex;
+    margin: 10px;
+}
+
+#duckdao{
+    color: darkgoldenrod;
+}
+
+#shinedao{
+    color: darkorange;
+}
+
+#fishdao{
+    color: blue;
+}
+
+#astrodao{
+    color: darkblue;
+}
+
+/* footer */
 
 footer{
-    margin: 50px;
     text-align: center;
+    display: inline-flex;
+    justify-content: space-around;
+    width: 100%;
 }
+
+
 
 @media only screen and (max-width: 492px){
     .center-container{
         height: 125px;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 620px){
+    .partner-container{
+        flex-direction: column;
+        font-size: smaller;
     }
 }
